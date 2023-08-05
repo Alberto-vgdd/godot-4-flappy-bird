@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bhm3rxdhyjvuh"
-path="res://.godot/imported/flappy_bird.blend-241f8eb989a86e8ef238da8567e5f29e.scn"
+uid="uid://drj184av8m2d6"
+path="res://.godot/imported/flappy_bird.blend-17a66d63099b4f9accf0bf88f4cb41d2.scn"
 
 [deps]
 
-source_file="res://models/flappy_bird.blend"
-dest_files=["res://.godot/imported/flappy_bird.blend-241f8eb989a86e8ef238da8567e5f29e.scn"]
+source_file="res://blender/flappy_bird.blend"
+dest_files=["res://.godot/imported/flappy_bird.blend-17a66d63099b4f9accf0bf88f4cb41d2.scn"]
 
 [params]
 

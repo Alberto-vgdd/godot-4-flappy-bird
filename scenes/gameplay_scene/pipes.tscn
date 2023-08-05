@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://coywo1lm36737"]
 
 [ext_resource type="Script" path="res://scripts/pipes.gd" id="1_r4au8"]
-[ext_resource type="PackedScene" uid="uid://s3e450ubfrjm" path="res://models/pipe.blend" id="2_s5upk"]
+[ext_resource type="PackedScene" uid="uid://ccr44tam408li" path="res://models/pipe.gltf" id="2_sm1jx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_211ve"]
 size = Vector3(0.2, 1.6, 0.2)
@@ -23,8 +23,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.3, 2.08165e-12
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Vertical Position/Upper Pipe/StaticBody3D"]
 shape = SubResource("BoxShape3D_211ve")
 
-[node name="pipe" parent="Vertical Position/Upper Pipe/StaticBody3D/CollisionShape3D" instance=ExtResource("2_s5upk")]
-transform = Transform3D(1, -3.48787e-16, -3.48787e-16, -3.48787e-16, -1, 8.74228e-08, -3.48787e-16, -8.74228e-08, -1, 2.08165e-12, -0.800235, 2.08165e-12)
+[node name="Pipe" parent="Vertical Position/Upper Pipe/StaticBody3D/CollisionShape3D" instance=ExtResource("2_sm1jx")]
+transform = Transform3D(-1, 8.74228e-08, 3.48787e-16, -8.74228e-08, -1, -3.48787e-16, 3.48787e-16, -3.48787e-16, 1, 2.08165e-12, -0.8, 2.08165e-12)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Vertical Position/Upper Pipe/StaticBody3D/CollisionShape3D"]
 visible = false
@@ -39,8 +39,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -1.3, 2.08165e-1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Vertical Position/Lower Pipe/StaticBody3D"]
 shape = SubResource("BoxShape3D_211ve")
 
-[node name="pipe" parent="Vertical Position/Lower Pipe/StaticBody3D/CollisionShape3D" instance=ExtResource("2_s5upk")]
-transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 2.08165e-12, 0.799617, 2.08165e-12)
+[node name="Pipe" parent="Vertical Position/Lower Pipe/StaticBody3D/CollisionShape3D" instance=ExtResource("2_sm1jx")]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 2.08165e-12, 0.8, 2.08165e-12)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Vertical Position/Lower Pipe/StaticBody3D/CollisionShape3D"]
 visible = false

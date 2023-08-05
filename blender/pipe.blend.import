@@ -3,20 +3,20 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://s3e450ubfrjm"
-path="res://.godot/imported/pipe.blend-131176f3ddc535992832d6a3f6f8a766.scn"
+uid="uid://soo8cyk3cbi1"
+path="res://.godot/imported/pipe.blend-6bfda98956760a618d87426cae22fc53.scn"
 
 [deps]
 
-source_file="res://models/pipe.blend"
-dest_files=["res://.godot/imported/pipe.blend-131176f3ddc535992832d6a3f6f8a766.scn"]
+source_file="res://blender/pipe.blend"
+dest_files=["res://.godot/imported/pipe.blend-6bfda98956760a618d87426cae22fc53.scn"]
 
 [params]
 
 nodes/root_type="Node3D"
 nodes/root_name="Scene Root"
 nodes/apply_root_scale=true
-nodes/root_scale=0.1
+nodes/root_scale=1.0
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
