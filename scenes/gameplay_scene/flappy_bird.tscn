@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://cf1p7tdppm3uo"]
+
+[ext_resource type="Script" path="res://scripts/flappy_bird.gd" id="1_5aq23"]
+[ext_resource type="AudioStream" uid="uid://br5uby2pmqysj" path="res://sounds/gameplay/flappy_bird_fly.ogg" id="2_aixmg"]
+[ext_resource type="PackedScene" uid="uid://cbthm4dnrry42" path="res://models/flappy_bird_model.tscn" id="2_iuct6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_clwip"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gy7e1"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[node name="Flappy Bird" type="Node3D" node_paths=PackedStringArray("rigid_body_3D", "fly_audio_stream_player", "flappy_bird_model")]
+script = ExtResource("1_5aq23")
+rigid_body_3D = NodePath("RigidBody3D")
+fly_audio_stream_player = NodePath("Fly Audio Steam Player")
+flappy_bird_model = NodePath("RigidBody3D/CollisionShape3D/Flappy Bird Model")
+fly_velocity_value = 3.0
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+gravity_scale = 2.66454e-15
+max_contacts_reported = 1
+contact_monitor = true
+lock_rotation = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_clwip")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/CollisionShape3D"]
+visible = false
+mesh = SubResource("BoxMesh_gy7e1")
+skeleton = NodePath("../..")
+
+[node name="Flappy Bird Model" parent="RigidBody3D/CollisionShape3D" instance=ExtResource("2_iuct6")]
+transform = Transform3D(0.1, -3.48787e-17, 3.48787e-17, 3.48787e-17, 0.1, -3.48787e-17, -3.48787e-17, 3.48787e-17, 0.1, 0, 0, 0)
+
+[node name="Fly Audio Steam Player" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_aixmg")
+
+[connection signal="body_entered" from="RigidBody3D" to="." method="_on_rigid_body_3d_body_entered"]

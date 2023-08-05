@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=3 uid="uid://bt27imr4lf2oj"]
+
+[ext_resource type="Script" path="res://scripts/gameplay_manager.gd" id="1_gc1oi"]
+[ext_resource type="PackedScene" uid="uid://bt4djo60r4aqq" path="res://scenes/gameplay_scene/ground.tscn" id="1_hs5jx"]
+[ext_resource type="PackedScene" uid="uid://cf1p7tdppm3uo" path="res://scenes/gameplay_scene/flappy_bird.tscn" id="2_1fjgg"]
+[ext_resource type="PackedScene" uid="uid://darais6dndm8d" path="res://scenes/gameplay_scene/pipe_spawner.tscn" id="4_40167"]
+[ext_resource type="Environment" uid="uid://cchobvorn0iqn" path="res://world_environments/world_environment.tres" id="4_yfqov"]
+[ext_resource type="AudioStream" uid="uid://brdbt68kp322i" path="res://sounds/gameplay/game_over.ogg" id="5_rilsn"]
+[ext_resource type="Script" path="res://scripts/gameplay_screen_user_interface.gd" id="6_2vqst"]
+[ext_resource type="AudioStream" uid="uid://7wsg4xma2u4g" path="res://sounds/gameplay/score_up.ogg" id="7_6yxfr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h6aem"]
+font_size = 72
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Gameplay Scene" type="Node" node_paths=PackedStringArray("game_over_audio_stream_player", "score_up_audio_stream_player")]
+script = ExtResource("1_gc1oi")
+game_over_audio_stream_player = NodePath("Audio Stream Player/Game Over")
+score_up_audio_stream_player = NodePath("Audio Stream Player/Score Up")
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 5)
+current = true
+fov = 30.0
+size = 2.5
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
+environment = ExtResource("4_yfqov")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(0.101056, 0.49744, -0.861592, 3.02058e-16, 0.866026, 0.5, 0.994881, -0.0505282, 0.0875173, 0, 3.97671, 7.65106)
+
+[node name="Gameplay Elements" type="Node" parent="."]
+
+[node name="Ground" parent="Gameplay Elements" instance=ExtResource("1_hs5jx")]
+
+[node name="Flappy Bird" parent="Gameplay Elements" instance=ExtResource("2_1fjgg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.2, 2.08165e-12)
+
+[node name="Pipe Spawner" parent="Gameplay Elements" instance=ExtResource("4_40167")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 1.2, 2.08165e-12)
+end_local_x_position = -7.5
+min_pipes_vertical_positon = -0.5
+max_pipes_vertical_positon = 0.35
+
+[node name="Audio Stream Player" type="Node" parent="."]
+
+[node name="Game Over" type="AudioStreamPlayer" parent="Audio Stream Player"]
+stream = ExtResource("5_rilsn")
+
+[node name="Score Up" type="AudioStreamPlayer" parent="Audio Stream Player"]
+stream = ExtResource("7_6yxfr")
+
+[node name="User Interface" type="Control" parent="." node_paths=PackedStringArray("score_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("6_2vqst")
+score_label = NodePath("Score Label")
+
+[node name="Score Label" type="Label" parent="User Interface"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -376.0
+offset_right = -176.001
+offset_bottom = 200.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "999"
+label_settings = SubResource("LabelSettings_h6aem")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="game_over" from="." to="Gameplay Elements/Flappy Bird" method="_on_gameplay_scene_game_over"]
+[connection signal="game_over" from="." to="Gameplay Elements/Pipe Spawner" method="_on_gameplay_scene_game_over"]
+[connection signal="game_reset" from="." to="Gameplay Elements/Flappy Bird" method="_on_gameplay_scene_game_reset"]
+[connection signal="game_reset" from="." to="Gameplay Elements/Pipe Spawner" method="_on_gameplay_scene_game_reset"]
+[connection signal="game_started" from="." to="Gameplay Elements/Flappy Bird" method="_on_gameplay_scene_game_started"]
+[connection signal="game_started" from="." to="Gameplay Elements/Pipe Spawner" method="_on_gameplay_scene_game_started"]
+[connection signal="score_changed" from="." to="Gameplay Elements/Pipe Spawner" method="_on_gameplay_scene_score_changed"]
+[connection signal="score_changed" from="." to="User Interface" method="_on_gameplay_scene_score_changed"]
+[connection signal="collided_with_obstacle" from="Gameplay Elements/Flappy Bird" to="." method="_on_flappy_bird_collided_with_obstacle"]
+[connection signal="pipes_moved_past_flappy_bird" from="Gameplay Elements/Pipe Spawner" to="." method="_on_pipe_spawner_pipes_moved_past_flappy_bird"]
