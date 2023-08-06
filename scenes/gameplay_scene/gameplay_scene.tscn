@@ -8,10 +8,9 @@
 [ext_resource type="Environment" uid="uid://cchobvorn0iqn" path="res://world_environments/world_environment.tres" id="4_yfqov"]
 [ext_resource type="AudioStream" uid="uid://brdbt68kp322i" path="res://sounds/gameplay/game_over.ogg" id="5_rilsn"]
 [ext_resource type="PackedScene" uid="uid://4f8mjnjjcg5f" path="res://scenes/gameplay_scene/background_layers/background_first_layer.tscn" id="5_vk30a"]
+[ext_resource type="PackedScene" uid="uid://cf1xdhbf0bf1n" path="res://scenes/gameplay_scene/background_layers/background_third_layer.tscn" id="6_0ubd4"]
 [ext_resource type="Script" path="res://scripts/gameplay_screen_user_interface.gd" id="6_2vqst"]
 [ext_resource type="AudioStream" uid="uid://7wsg4xma2u4g" path="res://sounds/gameplay/score_up.ogg" id="7_6yxfr"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_246j6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h6aem"]
 font_size = 72
@@ -35,29 +34,27 @@ size = 2.5
 environment = ExtResource("4_yfqov")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
-transform = Transform3D(0.101056, 0.49744, -0.861592, 3.02058e-16, 0.866026, 0.5, 0.994881, -0.0505282, 0.0875173, 0, 3.97671, 7.65106)
+transform = Transform3D(0.707107, 0.353554, -0.612372, 3.02058e-16, 0.866026, 0.5, 0.707107, -0.353554, 0.612372, 0, 3.97671, 7.65106)
+shadow_enabled = true
 
 [node name="Ground" parent="Environment" instance=ExtResource("1_hs5jx")]
 
 [node name="Background Parallax" parent="Environment" node_paths=PackedStringArray("background_layers") instance=ExtResource("4_1vkxv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.08165e-12, 2.08165e-12)
-background_layers = [NodePath("Background First Layer"), NodePath("CSGMesh3D2"), NodePath("CSGMesh3D3"), NodePath("CSGMesh3D4")]
-background_layers_speed_multipliers = Array[float]([0.9, 0.5, 0.3, 0.1])
+background_layers = [NodePath("Background First Layer"), NodePath("Background First Layer2"), NodePath("Background First Layer4"), NodePath("Background Third Layer")]
+background_layers_speed_multipliers = Array[float]([0.7, 0.5, 0.3, 0.1])
 
 [node name="Background First Layer" parent="Environment/Background Parallax" instance=ExtResource("5_vk30a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0053941, -2.26203)
 
-[node name="CSGMesh3D2" type="CSGMesh3D" parent="Environment/Background Parallax"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.490566, -4.10047)
-mesh = SubResource("BoxMesh_246j6")
+[node name="Background First Layer2" parent="Environment/Background Parallax" instance=ExtResource("5_vk30a")]
+transform = Transform3D(-1, 3.48787e-16, -8.74228e-08, 3.48787e-16, 1, -3.48787e-16, 8.74228e-08, -3.48787e-16, -1, 0, 0.0053941, -3.82905)
 
-[node name="CSGMesh3D3" type="CSGMesh3D" parent="Environment/Background Parallax"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.490566, -5.94802)
-mesh = SubResource("BoxMesh_246j6")
+[node name="Background Third Layer" parent="Environment/Background Parallax" instance=ExtResource("6_0ubd4")]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 2.08165e-12, -1.301, -6.795)
 
-[node name="CSGMesh3D4" type="CSGMesh3D" parent="Environment/Background Parallax"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.490566, -7.7759)
-mesh = SubResource("BoxMesh_246j6")
+[node name="Background First Layer4" parent="Environment/Background Parallax" instance=ExtResource("5_vk30a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0053941, -5.91911)
 
 [node name="Gameplay Elements" type="Node" parent="."]
 

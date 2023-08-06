@@ -57,8 +57,18 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
-"save_to_file/make_streamable": "",
+"save_to_file/make_streamable": false,
 "save_to_file/path": "res://models/gameplay_scene/background_layers/background_assets_Bush 3.res"
+},
+"background_assets_Plane": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://models/gameplay_scene/background_layers/background_assets_Plane.res"
 }
 }
 }

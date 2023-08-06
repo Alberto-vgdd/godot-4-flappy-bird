@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://cf1xdhbf0bf1n"]
+
+[ext_resource type="ArrayMesh" uid="uid://b44wio7u6xgm4" path="res://models/gameplay_scene/background_layers/background_assets_Plane.res" id="1_23dpm"]
+
+[node name="Background Third Layer" type="Node3D"]
+
+[node name="Pattern 1" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.08165e-12, 2.08165e-12)
+
+[node name="Mountains 1" type="MeshInstance3D" parent="Pattern 1"]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+mesh = ExtResource("1_23dpm")
+skeleton = NodePath("../..")
+
+[node name="Pattern 2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[node name="Mountains 1" type="MeshInstance3D" parent="Pattern 2"]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+mesh = ExtResource("1_23dpm")
+skeleton = NodePath("../..")
+
+[node name="Pattern 3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.08165e-12, 2.08165e-12)
+
+[node name="Mountains 1" type="MeshInstance3D" parent="Pattern 3"]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+mesh = ExtResource("1_23dpm")
+skeleton = NodePath("../..")
+
+[node name="Pattern 4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 2.08165e-12, 2.08165e-12)
+
+[node name="Mountains 1" type="MeshInstance3D" parent="Pattern 4"]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+mesh = ExtResource("1_23dpm")
+skeleton = NodePath("../..")

@@ -10,7 +10,8 @@
 			"nodes":[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -41,6 +42,10 @@
 				0.5393807291984558,
 				0
 			]
+		},
+		{
+			"mesh":3,
+			"name":"Plane"
 		}
 	],
 	"materials":[
@@ -97,6 +102,19 @@
 						"TEXCOORD_0":10
 					},
 					"indices":11
+				}
+			]
+		},
+		{
+			"name":"Plane",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":12,
+						"NORMAL":13,
+						"TEXCOORD_0":14
+					},
+					"indices":15
 				}
 			]
 		}
@@ -203,6 +221,40 @@
 			"componentType":5123,
 			"count":444,
 			"type":"SCALAR"
+		},
+		{
+			"bufferView":12,
+			"componentType":5126,
+			"count":402,
+			"max":[
+				60.28641891479492,
+				23.327009201049805,
+				3.4418203830718994
+			],
+			"min":[
+				-0.24578212201595306,
+				-0.14961016178131104,
+				-49.26626968383789
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":13,
+			"componentType":5126,
+			"count":402,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":14,
+			"componentType":5126,
+			"count":402,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":15,
+			"componentType":5123,
+			"count":1113,
+			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
@@ -277,11 +329,35 @@
 			"byteLength":888,
 			"byteOffset":9636,
 			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":4824,
+			"byteOffset":10524,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":4824,
+			"byteOffset":15348,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":3216,
+			"byteOffset":20172,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":2226,
+			"byteOffset":23388,
+			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":10524,
+			"byteLength":25616,
 			"uri":"background_assets.bin"
 		}
 	]
