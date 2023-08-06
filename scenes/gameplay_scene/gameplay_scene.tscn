@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bt27imr4lf2oj"]
+[gd_scene load_steps=11 format=3 uid="uid://bt27imr4lf2oj"]
 
 [ext_resource type="Script" path="res://scripts/gameplay_manager.gd" id="1_gc1oi"]
 [ext_resource type="PackedScene" uid="uid://bt4djo60r4aqq" path="res://scenes/gameplay_scene/ground.tscn" id="1_hs5jx"]
-[ext_resource type="PackedScene" uid="uid://cf1p7tdppm3uo" path="res://scenes/gameplay_scene/flappy_bird.tscn" id="2_1fjgg"]
-[ext_resource type="PackedScene" uid="uid://darais6dndm8d" path="res://scenes/gameplay_scene/pipe_spawner.tscn" id="4_40167"]
+[ext_resource type="PackedScene" uid="uid://cf1p7tdppm3uo" path="res://scenes/gameplay_scene/gameplay_elements/flappy_bird.tscn" id="2_1fjgg"]
+[ext_resource type="PackedScene" uid="uid://c0g5hf1tdwht4" path="res://scenes/gameplay_scene/background_parallax.tscn" id="4_1vkxv"]
+[ext_resource type="PackedScene" uid="uid://darais6dndm8d" path="res://scenes/gameplay_scene/gameplay_elements/pipe_spawner.tscn" id="4_40167"]
 [ext_resource type="Environment" uid="uid://cchobvorn0iqn" path="res://world_environments/world_environment.tres" id="4_yfqov"]
 [ext_resource type="AudioStream" uid="uid://brdbt68kp322i" path="res://sounds/gameplay/game_over.ogg" id="5_rilsn"]
 [ext_resource type="Script" path="res://scripts/gameplay_screen_user_interface.gd" id="6_2vqst"]
@@ -33,9 +34,11 @@ environment = ExtResource("4_yfqov")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
 transform = Transform3D(0.101056, 0.49744, -0.861592, 3.02058e-16, 0.866026, 0.5, 0.994881, -0.0505282, 0.0875173, 0, 3.97671, 7.65106)
 
-[node name="Gameplay Elements" type="Node" parent="."]
+[node name="Ground" parent="Environment" instance=ExtResource("1_hs5jx")]
 
-[node name="Ground" parent="Gameplay Elements" instance=ExtResource("1_hs5jx")]
+[node name="Background Parallax" parent="Environment" instance=ExtResource("4_1vkxv")]
+
+[node name="Gameplay Elements" type="Node" parent="."]
 
 [node name="Flappy Bird" parent="Gameplay Elements" instance=ExtResource("2_1fjgg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.2, 2.08165e-12)
@@ -82,12 +85,16 @@ label_settings = SubResource("LabelSettings_h6aem")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="game_over" from="." to="Environment/Background Parallax" method="_on_gameplay_scene_game_over"]
 [connection signal="game_over" from="." to="Gameplay Elements/Flappy Bird" method="_on_gameplay_scene_game_over"]
 [connection signal="game_over" from="." to="Gameplay Elements/Pipe Spawner" method="_on_gameplay_scene_game_over"]
+[connection signal="game_reset" from="." to="Environment/Background Parallax" method="_on_gameplay_scene_game_reset"]
 [connection signal="game_reset" from="." to="Gameplay Elements/Flappy Bird" method="_on_gameplay_scene_game_reset"]
 [connection signal="game_reset" from="." to="Gameplay Elements/Pipe Spawner" method="_on_gameplay_scene_game_reset"]
+[connection signal="game_started" from="." to="Environment/Background Parallax" method="_on_gameplay_scene_game_started"]
 [connection signal="game_started" from="." to="Gameplay Elements/Flappy Bird" method="_on_gameplay_scene_game_started"]
 [connection signal="game_started" from="." to="Gameplay Elements/Pipe Spawner" method="_on_gameplay_scene_game_started"]
+[connection signal="score_changed" from="." to="Environment/Background Parallax" method="_on_gameplay_scene_score_changed"]
 [connection signal="score_changed" from="." to="Gameplay Elements/Pipe Spawner" method="_on_gameplay_scene_score_changed"]
 [connection signal="score_changed" from="." to="User Interface" method="_on_gameplay_scene_score_changed"]
 [connection signal="collided_with_obstacle" from="Gameplay Elements/Flappy Bird" to="." method="_on_flappy_bird_collided_with_obstacle"]

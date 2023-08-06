@@ -53,11 +53,14 @@ func reset_pipes_positions():
 	
 	pipes_next_vertical_position = lerp(min_pipes_vertical_positon,max_pipes_vertical_positon,0.5)
 	pipes_array[pipes_count-1].set_vertical_position(pipes_next_vertical_position)
+	
+func reset_movement_speed() -> void:
 	movement_speed = base_movement_speed
 
 
 func _on_gameplay_scene_game_reset():
 	reset_pipes_positions()
+	reset_movement_speed()
 
 func _on_gameplay_scene_game_started():
 	is_game_running = true

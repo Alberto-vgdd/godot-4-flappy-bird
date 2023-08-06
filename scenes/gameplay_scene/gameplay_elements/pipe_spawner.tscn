@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://darais6dndm8d"]
 
 [ext_resource type="Script" path="res://scripts/pipe_spawner.gd" id="1_bvquc"]
-[ext_resource type="PackedScene" uid="uid://coywo1lm36737" path="res://scenes/gameplay_scene/pipes.tscn" id="2_dah7g"]
+[ext_resource type="PackedScene" uid="uid://coywo1lm36737" path="res://scenes/gameplay_scene/gameplay_elements/pipes.tscn" id="2_dah7g"]
 
 [node name="Pipe Spawner" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1, 2.08165e-12)
