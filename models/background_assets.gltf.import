@@ -38,7 +38,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://models/gameplay_scene/background_layers/background_assets_Bush 1.res"
+"save_to_file/path": "res://meshes/gameplay_scene/background_layers/background_assets_Bush 1.res"
 },
 "background_assets_Bush 2": {
 "generate/lightmap_uv": 0,
@@ -48,7 +48,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://models/gameplay_scene/background_layers/background_assets_Bush 2.res"
+"save_to_file/path": "res://meshes/gameplay_scene/background_layers/background_assets_Bush 2.res"
 },
 "background_assets_Bush 3": {
 "generate/lightmap_uv": 0,
@@ -58,9 +58,9 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": false,
-"save_to_file/path": "res://models/gameplay_scene/background_layers/background_assets_Bush 3.res"
+"save_to_file/path": "res://meshes/gameplay_scene/background_layers/background_assets_Bush 3.res"
 },
-"background_assets_Plane": {
+"background_assets_Medium Building": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
@@ -68,7 +68,37 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://models/gameplay_scene/background_layers/background_assets_Plane.res"
+"save_to_file/path": "res://meshes/gameplay_scene/background_layers/background_assets_Medium Building.res"
+},
+"background_assets_Mountains": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://meshes/gameplay_scene/background_layers/background_assets_Mountains.res"
+},
+"background_assets_Short Building": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://meshes/gameplay_scene/background_layers/background_assets_Short Building.res"
+},
+"background_assets_Tall Building": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://meshes/gameplay_scene/background_layers/background_assets_Tall Building.res"
 }
 }
 }

@@ -4,7 +4,7 @@
 size = Vector3(20, 0.5, 4)
 
 [sub_resource type="BoxMesh" id="BoxMesh_wpvlh"]
-size = Vector3(20, 0.5, 4)
+size = Vector3(20, 0.5, 20)
 
 [node name="Ground" type="Node3D"]
 

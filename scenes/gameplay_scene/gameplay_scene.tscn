@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bt27imr4lf2oj"]
+[gd_scene load_steps=14 format=3 uid="uid://bt27imr4lf2oj"]
 
 [ext_resource type="Script" path="res://scripts/gameplay_manager.gd" id="1_gc1oi"]
 [ext_resource type="PackedScene" uid="uid://bt4djo60r4aqq" path="res://scenes/gameplay_scene/ground.tscn" id="1_hs5jx"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://4f8mjnjjcg5f" path="res://scenes/gameplay_scene/background_layers/background_first_layer.tscn" id="5_vk30a"]
 [ext_resource type="PackedScene" uid="uid://cf1xdhbf0bf1n" path="res://scenes/gameplay_scene/background_layers/background_third_layer.tscn" id="6_0ubd4"]
 [ext_resource type="Script" path="res://scripts/gameplay_screen_user_interface.gd" id="6_2vqst"]
+[ext_resource type="PackedScene" uid="uid://b067wmnfod2s5" path="res://scenes/gameplay_scene/background_layers/background_second_layer.tscn" id="6_8eajp"]
 [ext_resource type="AudioStream" uid="uid://7wsg4xma2u4g" path="res://sounds/gameplay/score_up.ogg" id="7_6yxfr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h6aem"]
@@ -41,20 +42,20 @@ shadow_enabled = true
 
 [node name="Background Parallax" parent="Environment" node_paths=PackedStringArray("background_layers") instance=ExtResource("4_1vkxv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.08165e-12, 2.08165e-12)
-background_layers = [NodePath("Background First Layer"), NodePath("Background First Layer2"), NodePath("Background First Layer4"), NodePath("Background Third Layer")]
+background_layers = [NodePath("Background First Layer"), NodePath("Background First Layer4"), NodePath("Background Second Layer"), NodePath("Background Third Layer")]
 background_layers_speed_multipliers = Array[float]([0.7, 0.5, 0.3, 0.1])
 
 [node name="Background First Layer" parent="Environment/Background Parallax" instance=ExtResource("5_vk30a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0053941, -2.26203)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.108535, -2.26203)
 
-[node name="Background First Layer2" parent="Environment/Background Parallax" instance=ExtResource("5_vk30a")]
-transform = Transform3D(-1, 3.48787e-16, -8.74228e-08, 3.48787e-16, 1, -3.48787e-16, 8.74228e-08, -3.48787e-16, -1, 0, 0.0053941, -3.82905)
+[node name="Background First Layer4" parent="Environment/Background Parallax" instance=ExtResource("5_vk30a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.108534, -3.85913)
+
+[node name="Background Second Layer" parent="Environment/Background Parallax" instance=ExtResource("6_8eajp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.800156, -5.62862)
 
 [node name="Background Third Layer" parent="Environment/Background Parallax" instance=ExtResource("6_0ubd4")]
 transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 2.08165e-12, -1.301, -6.795)
-
-[node name="Background First Layer4" parent="Environment/Background Parallax" instance=ExtResource("5_vk30a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0053941, -5.91911)
 
 [node name="Gameplay Elements" type="Node" parent="."]
 
