@@ -48,7 +48,7 @@ func reset_pipes_positions():
 	var pipes_next_vertical_position: float
 	for i in pipes_count:
 		pipes_next_vertical_position = lerp(min_pipes_vertical_positon,max_pipes_vertical_positon,randf())
-		pipes_array[i].set_start_local_position(start_game_position_offset+start_local_x_position+distance_between_pipes*i)
+		pipes_array[i].set_start_local_position(start_local_x_position+(distance_between_pipes*i) + start_game_position_offset)
 		pipes_array[i].set_vertical_position(pipes_next_vertical_position)
 	
 	pipes_next_vertical_position = lerp(min_pipes_vertical_positon,max_pipes_vertical_positon,0.5)
