@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cf1xdhbf0bf1n"]
 
-[ext_resource type="ArrayMesh" uid="uid://2qbiw81vld5s" path="res://meshes/gameplay_scene/background_layers/background_assets_Mountains.res" id="1_xpoy1"]
+[ext_resource type="ArrayMesh" uid="uid://2qbiw81vld5s" path="res://meshes/game_scene/background_layers/background_assets_Mountains.res" id="1_xpoy1"]
 
 [node name="Background Third Layer" type="Node3D"]
 

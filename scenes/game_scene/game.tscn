@@ -1,16 +1,16 @@
 [gd_scene load_steps=14 format=3 uid="uid://bt27imr4lf2oj"]
 
-[ext_resource type="Script" path="res://scripts/gameplay_manager.gd" id="1_gc1oi"]
-[ext_resource type="PackedScene" uid="uid://bt4djo60r4aqq" path="res://scenes/gameplay_scene/ground.tscn" id="1_hs5jx"]
-[ext_resource type="PackedScene" uid="uid://cf1p7tdppm3uo" path="res://scenes/gameplay_scene/gameplay_elements/flappy_bird.tscn" id="2_1fjgg"]
-[ext_resource type="PackedScene" uid="uid://c0g5hf1tdwht4" path="res://scenes/gameplay_scene/background_layers/background_parallax.tscn" id="4_1vkxv"]
-[ext_resource type="PackedScene" uid="uid://darais6dndm8d" path="res://scenes/gameplay_scene/gameplay_elements/pipe_spawner.tscn" id="4_40167"]
+[ext_resource type="Script" path="res://scripts/game_scene/gameplay_manager.gd" id="1_gc1oi"]
+[ext_resource type="PackedScene" uid="uid://bt4djo60r4aqq" path="res://scenes/game_scene/gameplay_elements/ground.tscn" id="1_hs5jx"]
+[ext_resource type="PackedScene" uid="uid://cf1p7tdppm3uo" path="res://scenes/game_scene/gameplay_elements/flappy_bird.tscn" id="2_1fjgg"]
+[ext_resource type="PackedScene" uid="uid://c0g5hf1tdwht4" path="res://scenes/game_scene/background_layers/background_parallax.tscn" id="4_1vkxv"]
+[ext_resource type="PackedScene" uid="uid://darais6dndm8d" path="res://scenes/game_scene/gameplay_elements/pipe_spawner.tscn" id="4_40167"]
 [ext_resource type="Environment" uid="uid://cchobvorn0iqn" path="res://world_environments/world_environment.tres" id="4_yfqov"]
 [ext_resource type="AudioStream" uid="uid://brdbt68kp322i" path="res://sounds/gameplay/game_over.ogg" id="5_rilsn"]
-[ext_resource type="PackedScene" uid="uid://4f8mjnjjcg5f" path="res://scenes/gameplay_scene/background_layers/background_first_layer.tscn" id="5_vk30a"]
-[ext_resource type="PackedScene" uid="uid://cf1xdhbf0bf1n" path="res://scenes/gameplay_scene/background_layers/background_third_layer.tscn" id="6_0ubd4"]
-[ext_resource type="Script" path="res://scripts/gameplay_screen_user_interface.gd" id="6_2vqst"]
-[ext_resource type="PackedScene" uid="uid://b067wmnfod2s5" path="res://scenes/gameplay_scene/background_layers/background_second_layer.tscn" id="6_8eajp"]
+[ext_resource type="PackedScene" uid="uid://4f8mjnjjcg5f" path="res://scenes/game_scene/background_layers/background_first_layer.tscn" id="5_vk30a"]
+[ext_resource type="PackedScene" uid="uid://cf1xdhbf0bf1n" path="res://scenes/game_scene/background_layers/background_third_layer.tscn" id="6_0ubd4"]
+[ext_resource type="Script" path="res://scripts/game_scene/gameplay_user_interface.gd" id="6_2vqst"]
+[ext_resource type="PackedScene" uid="uid://b067wmnfod2s5" path="res://scenes/game_scene/background_layers/background_second_layer.tscn" id="6_8eajp"]
 [ext_resource type="AudioStream" uid="uid://7wsg4xma2u4g" path="res://sounds/gameplay/score_up.ogg" id="7_6yxfr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h6aem"]
@@ -20,6 +20,7 @@ outline_color = Color(0, 0, 0, 1)
 
 [node name="Gameplay Scene" type="Node" node_paths=PackedStringArray("game_over_audio_stream_player", "score_up_audio_stream_player")]
 script = ExtResource("1_gc1oi")
+main_menu_scene = "res://scenes/main_menu/main_menu_scene.tscn"
 game_over_audio_stream_player = NodePath("Audio Stream Player/Game Over")
 score_up_audio_stream_player = NodePath("Audio Stream Player/Score Up")
 

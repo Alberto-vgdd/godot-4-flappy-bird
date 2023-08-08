@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b067wmnfod2s5"]
 
-[ext_resource type="ArrayMesh" uid="uid://djwwt4uu4guxv" path="res://meshes/gameplay_scene/background_layers/background_assets_Short Building.res" id="1_dmmuv"]
-[ext_resource type="ArrayMesh" uid="uid://btf2pqu2h30b2" path="res://meshes/gameplay_scene/background_layers/background_assets_Medium Building.res" id="2_t2kk3"]
-[ext_resource type="ArrayMesh" uid="uid://bfeiuyugr032n" path="res://meshes/gameplay_scene/background_layers/background_assets_Tall Building.res" id="3_xc31v"]
+[ext_resource type="ArrayMesh" uid="uid://djwwt4uu4guxv" path="res://meshes/game_scene/background_layers/background_assets_Short Building.res" id="1_dmmuv"]
+[ext_resource type="ArrayMesh" uid="uid://btf2pqu2h30b2" path="res://meshes/game_scene/background_layers/background_assets_Medium Building.res" id="2_t2kk3"]
+[ext_resource type="ArrayMesh" uid="uid://bfeiuyugr032n" path="res://meshes/game_scene/background_layers/background_assets_Tall Building.res" id="3_xc31v"]
 
 [node name="Background Second Layer" type="Node3D"]
 

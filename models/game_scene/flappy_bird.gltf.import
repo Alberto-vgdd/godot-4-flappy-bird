@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://imv1b326ei4y"
-path="res://.godot/imported/flappy_bird.gltf-47aab65c149757c2e5eb936901141de7.scn"
+path="res://.godot/imported/flappy_bird.gltf-55e62e1af619c8d854699d925a26c374.scn"
 
 [deps]
 
-source_file="res://models/flappy_bird.gltf"
-dest_files=["res://.godot/imported/flappy_bird.gltf-47aab65c149757c2e5eb936901141de7.scn"]
+source_file="res://models/game_scene/flappy_bird.gltf"
+dest_files=["res://.godot/imported/flappy_bird.gltf-55e62e1af619c8d854699d925a26c374.scn"]
 
 [params]
 

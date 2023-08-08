@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://4f8mjnjjcg5f"]
 
-[ext_resource type="ArrayMesh" uid="uid://drlxtvs3si4dy" path="res://meshes/gameplay_scene/background_layers/background_assets_Bush 1.res" id="1_yitss"]
-[ext_resource type="ArrayMesh" uid="uid://3d1bwklswt13" path="res://meshes/gameplay_scene/background_layers/background_assets_Bush 2.res" id="2_vqw20"]
-[ext_resource type="ArrayMesh" uid="uid://b51y16oajltg4" path="res://meshes/gameplay_scene/background_layers/background_assets_Bush 3.res" id="3_7bii8"]
+[ext_resource type="ArrayMesh" uid="uid://drlxtvs3si4dy" path="res://meshes/game_scene/background_layers/background_assets_Bush 1.res" id="1_yitss"]
+[ext_resource type="ArrayMesh" uid="uid://3d1bwklswt13" path="res://meshes/game_scene/background_layers/background_assets_Bush 2.res" id="2_vqw20"]
+[ext_resource type="ArrayMesh" uid="uid://b51y16oajltg4" path="res://meshes/game_scene/background_layers/background_assets_Bush 3.res" id="3_7bii8"]
 
 [node name="Background First Layer" type="Node3D"]
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://cajpamw0o56au"]
 
-[ext_resource type="PackedScene" uid="uid://imv1b326ei4y" path="res://models/flappy_bird.gltf" id="1_lehtn"]
-[ext_resource type="Script" path="res://scripts/flappy_bird_model.gd" id="2_4yi1i"]
+[ext_resource type="PackedScene" uid="uid://imv1b326ei4y" path="res://models/game_scene/flappy_bird.gltf" id="1_lehtn"]
+[ext_resource type="Script" path="res://scripts/game_scene/flappy_bird_model.gd" id="2_nxq6u"]
 
 [node name="Flappy Bird Model" node_paths=PackedStringArray("left_wing", "right_wing", "rotation_pivot") instance=ExtResource("1_lehtn")]
-script = ExtResource("2_4yi1i")
+script = ExtResource("2_nxq6u")
 left_wing = NodePath("Left Wing")
 right_wing = NodePath("Right Wing")
 rotation_pivot = NodePath(".")

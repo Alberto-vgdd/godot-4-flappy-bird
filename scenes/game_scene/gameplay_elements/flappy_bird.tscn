@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cf1p7tdppm3uo"]
 
-[ext_resource type="Script" path="res://scripts/flappy_bird.gd" id="1_5aq23"]
+[ext_resource type="Script" path="res://scripts/game_scene/flappy_bird.gd" id="1_5aq23"]
 [ext_resource type="AudioStream" uid="uid://br5uby2pmqysj" path="res://sounds/gameplay/flappy_bird_fly.ogg" id="2_aixmg"]
-[ext_resource type="PackedScene" uid="uid://cajpamw0o56au" path="res://scenes/gameplay_scene/flappy_bird_model.tscn" id="2_uikr5"]
+[ext_resource type="PackedScene" uid="uid://cajpamw0o56au" path="res://scenes/game_scene/gameplay_elements/flappy_bird_model.tscn" id="2_uikr5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_clwip"]
 size = Vector3(0.2, 0.2, 0.2)

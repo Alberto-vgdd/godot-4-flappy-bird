@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ccr44tam408li"
-path="res://.godot/imported/pipe.gltf-1a242af98d1c4f91579b68105afed7dd.scn"
+path="res://.godot/imported/pipe.gltf-71573434a1f3d1fe6bc77416a72180cf.scn"
 
 [deps]
 
-source_file="res://models/pipe.gltf"
-dest_files=["res://.godot/imported/pipe.gltf-1a242af98d1c4f91579b68105afed7dd.scn"]
+source_file="res://models/game_scene/pipe.gltf"
+dest_files=["res://.godot/imported/pipe.gltf-71573434a1f3d1fe6bc77416a72180cf.scn"]
 
 [params]
 

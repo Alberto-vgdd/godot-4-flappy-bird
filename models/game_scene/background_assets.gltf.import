@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://qls25hf6y4sq"
-path="res://.godot/imported/background_assets.gltf-f483c23dbad3a32ea105c0f90fcc5de0.scn"
+path="res://.godot/imported/background_assets.gltf-9a6eda7e00ce2206a05fc922bece8ffd.scn"
 
 [deps]
 
-source_file="res://models/background_assets.gltf"
-dest_files=["res://.godot/imported/background_assets.gltf-f483c23dbad3a32ea105c0f90fcc5de0.scn"]
+source_file="res://models/game_scene/background_assets.gltf"
+dest_files=["res://.godot/imported/background_assets.gltf-9a6eda7e00ce2206a05fc922bece8ffd.scn"]
 
 [params]
 

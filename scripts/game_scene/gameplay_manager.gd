@@ -9,6 +9,8 @@ signal game_over()
 signal game_reset()
 signal score_changed(new_score: int)
 
+@export_category("Dependencies")
+@export_file var main_menu_scene: String
 
 @export_category("Components")
 @export var game_over_audio_stream_player: AudioStreamPlayer
@@ -23,7 +25,6 @@ func _ready():
 	game_reset.connect(on_game_reset)
 	game_reset.emit()
 
-
 func on_game_reset():
 	score = 0
 	score_changed.emit(score)
@@ -36,6 +37,8 @@ func _process(_delta):
 			is_waiting_for_player_input = false
 			is_game_running = true
 			game_started.emit()
+	if (Input.is_action_just_pressed("exit_game")):
+		get_tree().change_scene_to_file(main_menu_scene)
 
 
 func _on_flappy_bird_collided_with_obstacle():

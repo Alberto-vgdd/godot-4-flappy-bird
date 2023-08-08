@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://coywo1lm36737"]
 
-[ext_resource type="Script" path="res://scripts/pipes.gd" id="1_r4au8"]
-[ext_resource type="ArrayMesh" uid="uid://ree0prf2kuth" path="res://meshes/pipe_Pipe.res" id="2_f7o47"]
+[ext_resource type="Script" path="res://scripts/game_scene/pipes.gd" id="1_r4au8"]
+[ext_resource type="ArrayMesh" uid="uid://ree0prf2kuth" path="res://meshes/game_scene/pipe_Pipe.res" id="2_f4axa"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_211ve"]
 size = Vector3(0.2, 1.6, 0.2)
@@ -23,7 +23,7 @@ shape = SubResource("BoxShape3D_211ve")
 [node name="Pipe" type="MeshInstance3D" parent="Vertical Position/Upper Pipe/StaticBody3D/CollisionShape3D"]
 transform = Transform3D(-1, 8.74228e-08, 3.48787e-16, -8.74228e-08, -1, -3.48787e-16, 3.48787e-16, -3.48787e-16, 1, 2.08165e-12, -0.8, 2.08165e-12)
 cast_shadow = 0
-mesh = ExtResource("2_f7o47")
+mesh = ExtResource("2_f4axa")
 skeleton = NodePath("../..")
 
 [node name="Lower Pipe" type="Node3D" parent="Vertical Position"]
@@ -36,5 +36,5 @@ shape = SubResource("BoxShape3D_211ve")
 
 [node name="Pipe" type="MeshInstance3D" parent="Vertical Position/Lower Pipe/StaticBody3D/CollisionShape3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.8, 2.08165e-12)
-mesh = ExtResource("2_f7o47")
+mesh = ExtResource("2_f4axa")
 skeleton = NodePath("../..")
